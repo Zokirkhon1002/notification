@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+$pushti: rebeccapurple;
+$font:  'Audiowide', cursive;
+$oq: #ffffff;
+$tvalue: all 0.5s;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: $pushti;
+    font: {
+        family: $font;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+}
+.container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    bottom: 0px !important;
+    right: 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+
+}
+.btn {
+    background-color: $oq;
+    color: $pushti;
+    font: {
+        family: inherit;
+        weight: bold;
+    }
+    padding: 1.5rem;
+    border:none; 
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    width: 300px;
+    transition: $tvalue;
+    span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: $tvalue;
+    }
+    span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: $tvalue;
+    }
+}
+.btn:hover span {
+        padding-right: 25px;
+}
+.btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.btn:focus {
+    outline: none;
+  }
+  
+  .btn:active {
+    transform: scale(0.98);
+  }
+  #toasts {
+    position: absolute;
+    bottom: 10px !important;
+    right: 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    
+}
+.toast {
+     background-color: $oq;
+     border-radius: 5px;
+     padding: 1rem 2rem;
+     margin: 0.5rem;
+}
+.toast.info {
+    color: $pushti;
+}
+.toast.succes {
+    $pushti: green;
+    color: $pushti;
+}
+.toast.error {
+    $pushti: red;
+    color: $pushti;
+}
