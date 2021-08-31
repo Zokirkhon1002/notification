@@ -1,10 +1,10 @@
 const btn = document.getElementById("button"),
   toasts = document.querySelector(".toasts"),
   Messages = [
-    "Notification One",
-    "Notification Two",
-    "Notification Three",
-    "Notification Four",
+    "(Do not click right mouse) One",
+    "(Do not click right mouse) Two",
+    "(Do not click right mouse) Three",
+    "(Do not click right mouse) Four",
   ],
   classTypes = ["info", "success", "error"];
 
